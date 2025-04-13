@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Segmentation Result - Customer Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.pixabay.com/photo/2018/05/31/06/45/feedback-3443287_1280.jpg'); 
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 80px auto;
+            color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(246, 244, 244, 0.1);
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(10px); 
+        }
+        h1 {
+            text-align: center;
+            color: #fafafa;
+        }
+        .result {
+            text-align: center;
+            font-size: 20px;
+            color: #fbfafa;
+        }
+        .result p {
+            margin: 15px 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .button-container a {
+            display: inline-block;
+            background-color: #e91111;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 20px;
+        }
+        .button-container a:hover {
+            background-color: #fce91a;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Segmentation Result</h1>
+        <div class="result">
+            <p><strong>Prediction :</strong> {{ prediction }}</p>
+            <p><strong>Message :</strong> {{ message }}</p>
+        </div>
+        <div class="button-container">
+            <a href="{% url 'user' %}">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
